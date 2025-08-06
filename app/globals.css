@@ -49,6 +49,19 @@
   }
 }
 
+@layer utilities {
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    input[type="number"] {
+      font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .mobile-input-fix input {
+      font-size: 16px !important;
+    }
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
